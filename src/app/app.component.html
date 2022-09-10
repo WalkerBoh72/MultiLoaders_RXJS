@@ -1,0 +1,23 @@
+<hello></hello> 
+<i>
+  <a href='#' (click)="load()">{{loc ? '(re)' : ''}}load data</a>
+</i>
+
+<table style="border:1px;">
+  <tr>
+    <td style="border-right: 1px solid;" class="align">
+      <app-loading [name]="loaders[0].name"></app-loading>
+      <app-data [data]="loc" [title]="'Locations'"></app-data>
+    </td>
+    <td class="align">
+      <app-loading [name]="loaders[1].name"></app-loading>
+      <app-data [data]="hCl" [title]="'Classes'"></app-data>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border-top: 1px solid" class="align">
+      <app-loading [name]="loaders[2].name"></app-loading>
+      <app-data [data]="npc" [title]="'NPC'"></app-data>
+    </td>
+  </tr>
+</table>

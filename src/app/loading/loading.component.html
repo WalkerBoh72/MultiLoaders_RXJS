@@ -1,0 +1,3 @@
+<div class="spinner-container" *ngIf="loadingService.isLoading$(name) | async">
+{{loadingService.title$(name) | async}}
+</div>
